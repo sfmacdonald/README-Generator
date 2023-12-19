@@ -1,24 +1,24 @@
 // Include packages required for this app
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateREADME = require('./generateREADME');
+const generateMarkdown = require('./generateMarkdown.js');
 
 // Create an array of questions for user input
 function promptUser() {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'Project Name',
+            name: 'title',
             message: 'Enter the project title:',
         },
         {
             type: 'input',
-            name: 'Description',
+            name: 'description',
             message: 'Enter a project description:',
         },
         {
             type: 'input',
-            name: 'Features',
+            name: 'features',
             message: 'Enter the key features of the application/project:',
         },
         {
@@ -28,7 +28,7 @@ function promptUser() {
         },
         {
             type: 'list',
-            name: 'License',
+            name: 'license',
             message: 'Choose a license:',
             choices: ['MIT', 'Apache', 'GPL', 'Other', 'None'],
         },
@@ -39,12 +39,12 @@ function promptUser() {
         },
         {
             type: 'input',
-            name: 'Testing',
+            name: 'tests',
             message: 'Enter test instructions:',
         },
         {
-            type: 'list',
-            name: 'Collaborators',
+            type: 'input',
+            name: 'collaborators',
             message: 'Enter names of collaborators on the project:',
         },
     ]);
@@ -53,13 +53,13 @@ function promptUser() {
 // Function to write the README file
 function writeREADME(data) {
     const filename = 'README.md';
-    const content = generateREADME(data);
+    const content = generateMarkdown(data);
 
     fs.writeFile(filename, content, (err) => {
         if (err) {
             console.error(err);
         } else {
-            console.log(`README.md successfully generated!`);
+            console.log(`${filename} successfully generated!`);
         }
     });
 }
