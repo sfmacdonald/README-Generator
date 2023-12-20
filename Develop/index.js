@@ -18,13 +18,13 @@ function promptUser() {
         },
         {
             type: 'input',
-            name: 'features',
+            name: 'usage',
             message: 'Enter the key features of the application/project:',
         },
         {
             type: 'input',
-            name: 'usage',
-            message: 'Enter usage information:',
+            name: 'installation',
+            message: 'Enter installation steps:',
         },
         {
             type: 'list',
@@ -46,6 +46,25 @@ function promptUser() {
             type: 'input',
             name: 'collaborators',
             message: 'Enter names of collaborators on the project:',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your GitHub username:',
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'Enter your email address:',
+            validate: function (input) {
+                // Use a regular expression to validate the input as an email address
+                const emailRegex = /\S+@\S+\.\S+/;
+                if (emailRegex.test(input)) {
+                    return true;
+                } else {
+                    return 'Please enter a valid email address.';
+                }
+            },
         },
     ]);
 }
