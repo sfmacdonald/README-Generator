@@ -20,7 +20,7 @@ Javascript function to create a README file via the terminal
 User may create a README file via the terminal by answering prompts. Once the prompts are completed, a README file shall be generated with the inputs for the user.
 
 ## Installation
-undefined
+1.Install Node.js (version 12 or higher): [Node.js](https://nodejs.org/). To check the version currently installed, enter  “node -v” in the terminal. 2.Install Inquirer with “npm install inquirer” in the terminal. To check the version currently installed, enter  “npm list inquirer” in the terminal.  3.Clone the repository: git clone git@github.com:sfmacdonald/README-Generator.git
 
 ## License
 This project is licensed under the [Other](https://opensource.org/licenses/Other).
