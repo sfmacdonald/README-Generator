@@ -72,7 +72,7 @@ ${data.tests}
 ${data.collaborators}
 
 ## GitHub
-[${data.github}](https://github.com/${data.github})
+https://github.com/${data.github}
 
 ## Questions
 ${data.questions}

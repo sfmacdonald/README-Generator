@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./generateMarkdown.js');
 
-// Create an array of questions for user input
+// Create questions for user input
 function promptUser() {
     return inquirer.prompt([
         {
@@ -57,7 +57,7 @@ function promptUser() {
             name: 'questions',
             message: 'Enter your email address:',
             validate: function (input) {
-                // Use a regular expression to validate the input as an email address
+                // Use a regular expression to validate input as an email address
                 const emailRegex = /\S+@\S+\.\S+/;
                 if (emailRegex.test(input)) {
                     return true;

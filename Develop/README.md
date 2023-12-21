@@ -35,7 +35,7 @@ Please reach out via email below
 None
 
 ## GitHub
-[sfmacdonald](https://github.com/sfmacdonald)
+https://github.com/sfmacdonald
 
 ## Questions
-seanfmacdonald@icloud.com
+sfmacdonald@icloud.com
